@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://chana:chana1234@cluster0-m9y62.mongodb.net/Footage_Market?retryWrites=true&w=majority",
+  "PAYPAL_CLIENT_ID": "ASJvh71d9PZeF2JPqQhEuPT81AY2G_a_YUL5OrPzaYduZjSwp4LoMrYu64iIEOfZkULPN-jM_khV7-YA"
+}
