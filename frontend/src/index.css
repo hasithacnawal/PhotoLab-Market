@@ -161,9 +161,9 @@ img.small {
   width: 100%;
 }
 img.medium {
-  max-height: 25rem;
-  max-width: 30rem;
-  width: 100%;
+  height: 25rem;
+  width: 32rem;
+  /* width: 100%; */
 }
 img.large {
   max-height: 30rem;
