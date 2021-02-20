@@ -21,7 +21,7 @@ function Navbar() {
         {" "}
         <Sidenav />
         <Link className="brand" to="/">
-          Photoshock
+          PhotoLab
         </Link>
         <nav-items>
           <li>
@@ -63,7 +63,11 @@ function Navbar() {
             </ul>
           </div>
         ) : (
-          <Link to="/signin">Sign In</Link>
+          <button className="sign">
+            <Link to="/signin" style={{ color: "white" }}>
+              Sign In
+            </Link>
+          </button>
         )}
         {userInfo && userInfo.isAdmin && (
           <div className="dropdown">

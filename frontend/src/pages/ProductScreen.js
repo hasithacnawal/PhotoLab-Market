@@ -31,7 +31,7 @@ function ProductScreen(props) {
       ) : (
         <div>
           {""}
-          <button>
+          <button className="primary">
             <Link to="/products">Back to Photos</Link>
           </button>
 
