@@ -1,7 +1,7 @@
 import React from "react";
 
 function Homepage() {
-  return <div>My Home pages</div>;
+  return <div>Hello world</div>;
 }
 
 export default Homepage;
