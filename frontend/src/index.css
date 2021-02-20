@@ -81,7 +81,7 @@ select,
 textarea,
 button {
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   border: 0.1rem #a4a4a4 solid;
   font-size: 1.6rem;
   font-family: Helvetica, Arial, sans-serif;
@@ -101,13 +101,42 @@ button:hover {
 }
 
 button.primary {
-  background-color: #9b5959;
+  background-color: #383838;
+  color: white;
 }
 button.block {
-  width: 100%;
+  width: 50%;
 }
 button.small {
   font-size: 1.2rem;
+}
+button.download {
+  background-color: #b94848;
+  color: white;
+  margin-right: 4px;
+}
+.container {
+  justify-content: center;
+  padding-right: 18px;
+  padding-left: 18px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1180px;
+  }
 }
 
 /* Header */
@@ -129,6 +158,11 @@ a.brand {
   margin-left: 0.2rem;
 }
 
+.row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -176,14 +210,28 @@ img.large {
 .card {
   border: 0.1rem #c0c0c0 solid;
   background-color: #f8f8f8;
+  max-width: 40rem;
   border-radius: 0.5rem;
   margin: 1rem;
 }
 .card-body {
+  margin-left: 2rem;
   padding: 1rem;
 }
 .card-body > * {
   margin-bottom: 0.5rem;
+}
+.product-detail-card {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: white;
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 3rem;
+  justify-content: center;
+}
+.select-size {
+  margin-top: 2rem;
 }
 .price {
   font-size: 2rem;
