@@ -28,11 +28,15 @@ const orderSchema = new mongoose.Schema(
       },
     ],
     shippingDetails: {
-      fullName: { type: String, required: true },
-      address: { type: String, required: true },
-      city: { type: String, required: true },
-      postalCode: { type: String, required: true },
-      country: { type: String, required: true },
+      aEmail: { type: String, required: true },
+
+      cardNumber: { type: String, required: false },
+      nameOnCard: { type: String, required: false },
+      cvv: { type: Number, required: false },
+      mm: { type: Number, required: false },
+      yyyy: { type: Number, required: false },
+      postalCode: { type: String, rrequired: false },
+      country: { type: String, required: false },
     },
     paymentMethod: { type: String, required: true },
     paymentResult: {

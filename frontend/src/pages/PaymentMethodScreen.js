@@ -6,7 +6,7 @@ import CheckoutSteps from "../components/CheckoutSteps";
 function PaymentMethodScreen(props) {
   const cart = useSelector((state) => state.cart);
   const { shippingDetails } = cart;
-  if (!shippingDetails.address) {
+  if (!shippingDetails.aEmail) {
     props.history.push("/shipping");
   }
   const [paymentMethod, setPaymentMethod] = useState("paypal");

@@ -93,7 +93,11 @@ button {
   cursor: pointer;
 }
 
-input:hover,
+input:hover {
+  text-decoration: none;
+  border: 0.1rem #351b1b solid;
+}
+
 select:hover,
 textarea:hover,
 button:hover {
@@ -102,6 +106,10 @@ button:hover {
 
 button.primary {
   background-color: #383838;
+  color: white;
+}
+button.primary:hover {
+  background-color: #a05c5c;
   color: white;
 }
 button.block {
@@ -120,7 +128,7 @@ button.sign {
 button.sign:hover {
   border-radius: 2rem;
   border: 0.1rem #404040 solid;
-  background-color: #000000;
+  background-color: #383838;
   width: 50%;
   min-width: 10rem;
   padding: none;
@@ -186,6 +194,13 @@ a.brand {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+.row-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
 }
 .row.center {
   justify-content: center;

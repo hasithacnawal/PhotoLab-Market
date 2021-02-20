@@ -10,7 +10,8 @@ import { ORDER_CREATE_RESET } from "../constants/orderConstants";
 function PlaceOrderScreen(props) {
   const cart = useSelector((state) => state.cart);
   //const shippingDetails = cart
-  if (!cart.shippingDetails.address) {
+
+  if (!cart.paymentMethod) {
     props.history.push("/payment");
   }
 
@@ -58,6 +59,7 @@ function PlaceOrderScreen(props) {
             <li>
               <div className="card card-body">
                 <h2>Payment Details</h2>
+                {}
                 <p>
                   <strong>Name : {cart.paymentMethod}</strong>
                 </p>
