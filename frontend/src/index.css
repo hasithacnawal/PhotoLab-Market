@@ -81,7 +81,7 @@ select,
 textarea,
 button {
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   border: 0.1rem #a4a4a4 solid;
   font-size: 1.6rem;
   font-family: Helvetica, Arial, sans-serif;
@@ -120,7 +120,7 @@ button.sign {
 button.sign:hover {
   border-radius: 2rem;
   border: 0.1rem #404040 solid;
-  background-color: #435996;
+  background-color: #000000;
   width: 50%;
   min-width: 10rem;
   padding: none;

@@ -32,7 +32,9 @@ function ProductScreen(props) {
         <div>
           {""}
           <button className="primary">
-            <Link to="/products">Back to Photos</Link>
+            <Link to="/products" style={{ color: "white" }}>
+              Back to Photos
+            </Link>
           </button>
 
           <div className="container">
@@ -44,7 +46,7 @@ function ProductScreen(props) {
                     <div className="row">
                       <img
                         className="large"
-                        src={product.image}
+                        src={product.blockImage}
                         alt={product.name}
                       ></img>
                     </div>

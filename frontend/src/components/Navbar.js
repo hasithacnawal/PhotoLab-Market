@@ -21,7 +21,7 @@ function Navbar() {
         {" "}
         <Sidenav />
         <Link className="brand" to="/">
-          PhotoLab
+          PhotoLab LK
         </Link>
         <nav-items>
           <li>
