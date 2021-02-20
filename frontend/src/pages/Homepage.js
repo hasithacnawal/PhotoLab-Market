@@ -1,8 +1,9 @@
 import React from "react";
-import Hero from "../components/Hero/index";
+import HomeTopSection from "../components/HomeTopSection/index";
+
 
 function Homepage() {
-  return <div><Hero/></div>;
+  return <div><HomeTopSection/></div>;
 }
 
 export default Homepage;
