@@ -9,7 +9,7 @@ export const HomeTopContainer = styled.div`
     height: 600px;
     position: relative;
     z-index: 1; 
-    border-radius: 0 0 85% 85% / 30%;
+    // border-radius: 0 0 85% 85% / 30%;
     
 
     :before {
@@ -23,7 +23,7 @@ export const HomeTopContainer = styled.div`
         rgba(0, 0, 0, 0.6) 100% ),
         linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
         z-index: 2;
-        border-radius: 0 0 85% 85% / 30%;
+        // border-radius: 0 0 85% 85% / 30%;
          
     }
 `;
@@ -38,7 +38,7 @@ export const HomeTopBg = styled.div`
     height: 100%;
     overflow: hidden;
     background-attachment: fixed;
-    border-radius: 0 0 85% 85% / 30%;
+    // border-radius: 0 0 85% 85% / 30%;
 `;
 
 export const VideoBg = styled.video`
