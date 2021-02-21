@@ -33,7 +33,29 @@ const Footer = () => {
                     
                     </FooterLinksWrapper>
                 </FooterLinksContainer>
-                
+                <SocialMedia>
+                    <SocialMediaWrap>
+                        <SocialLogo to='/'>
+                            <img src={logo} alt="Footer Logo" style={{
+                                width: "150px",
+                                height: "80px",
+                                borderRadius: "10px"}}/>
+                        </SocialLogo>
+                        <WebsiteRights>PhotoLab Market © {new Date().getFullYear()}
+                        All rights reserved.</WebsiteRights>
+                        <SocialIcons>
+                            <SocialIconLink href="/" target="_blank" arial-label="Facebook">
+                                <FaFacebook />
+                            </SocialIconLink>
+                            <SocialIconLink href="/" target="_blank" arial-label="Instagram">
+                                <FaInstagram />
+                            </SocialIconLink>
+                            <SocialIconLink href="/" target="_blank" arial-label="Twitter">
+                                <FaTwitter />
+                            </SocialIconLink>
+                        </SocialIcons>
+                    </SocialMediaWrap>
+                </SocialMedia>
             </FooterWrap>
         </FooterContainer>
     )
