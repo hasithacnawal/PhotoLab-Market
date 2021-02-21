@@ -1,6 +1,13 @@
 import React from 'react';
 import logo from '../../videos/searching.svg';
-
+import { FaFacebook, FaInstagram, FaTwitter} from 'react-icons/fa';
+import { 
+    FooterContainer, 
+    FooterWrap, 
+    FooterLinksContainer, 
+    FooterLinksWrapper, 
+    FooterLinkItems, 
+    FooterLink, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights, SocialIcons, SocialIconLink} from './FootersectionElements';
 
 const Footer = () => {
     return (
