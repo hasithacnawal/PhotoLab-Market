@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 const db = config.get("mongoURI");
 
 mongoose
-  .connect(db || "mongodb://localhost/Photoshock", {
+  .connect("mongodb://localhost/Photoshock", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,

@@ -9,6 +9,13 @@ import MessageBox from "../components/MessageBox";
 import { ORDER_PAYMENT_RESET } from "../constants/orderConstants";
 
 function OrderScreen(props) {
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
+
+  if (!userInfo) {
+    props.history.push("/signin");
+  }
+
   const orderId = props.match.params.id;
 
   const [sdkReady, setSdkReady] = useState(false);
@@ -64,9 +71,9 @@ function OrderScreen(props) {
           <ul>
             <li>
               <div className="card card-body">
-                <h2>Download Email</h2>
+                <h2>Download Info</h2>
                 <p>
-                  <strong>Name : {order.shippingDetails.aEmail}</strong>{" "}
+                  <strong>Email : {order.shippingDetails.aEmail}</strong>{" "}
                 </p>
                 {order.isDelivered ? (
                   <MessageBox variant="success">

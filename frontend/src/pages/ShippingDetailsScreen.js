@@ -13,6 +13,7 @@ export default function ShippingDetailsScreen(props) {
   if (!userInfo) {
     props.history.push("/signin");
   }
+  const [paymentMethod, setPaymentMethod] = useState(cart.paymentMethod);
   const [aEmail, setAEmail] = useState(userInfo.email);
   //const [cardType, setCardType] = useState(shippingDetails.cardType);
   const [cardNumber, setCardNumber] = useState(shippingDetails.cardNumber);
@@ -28,29 +29,22 @@ export default function ShippingDetailsScreen(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     //dispatch save shipping address
-    if (!cart.shippingDetails.cardNumber == null) {
-      dispatch(
-        saveShippingDetails({
-          aEmail,
-          cardNumber,
-          nameOnCard,
-          mm,
-          yyyy,
-          cvv,
-          postalCode,
-          country,
-        })
-      );
 
-      props.history.push("/placeorder");
-    } else {
-      dispatch(
-        saveShippingDetails({
-          aEmail,
-        })
-      );
-      props.history.push("/payment");
-    }
+    dispatch(
+      saveShippingDetails({
+        aEmail,
+        cardNumber,
+        nameOnCard,
+        mm,
+        yyyy,
+        cvv,
+        postalCode,
+        country,
+      })
+    );
+
+    setPaymentMethod("Credit Card");
+    props.history.push("/placeorder");
   };
 
   return (

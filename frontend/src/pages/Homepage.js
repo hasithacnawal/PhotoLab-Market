@@ -4,7 +4,14 @@ import Category from "../components/CategorySection/index";
 import Footer from "../components/Footer/index";
 
 function Homepage() {
-  return <div><HomeTopSection/><Category/><Footer/></div>;
+  return (
+    <div>
+      {" "}
+      <HomeTopSection />
+      <Category />
+      <Footer />{" "}
+    </div>
+  );
 }
 
 export default Homepage;
