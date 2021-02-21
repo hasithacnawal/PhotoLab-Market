@@ -26,6 +26,16 @@ const  Category = () => {
                     <CategoryIcon src={Icon3} />
                     <CategoryH2>Wallpapers</CategoryH2>
                 </CategoryCard>
+        
+                 <CategoryCard>
+                    <CategoryIcon src={Icon5} />
+                    <CategoryH2>Cartoon</CategoryH2>
+                </CategoryCard>
+        
+                <CategoryCard>
+                    <CategoryIcon src={Icon5} />
+                    <CategoryH2>Trees</CategoryH2>
+                </CategoryCard>
 
             </CategoryWrapper>
         </CategoryContainer>
