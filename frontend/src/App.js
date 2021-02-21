@@ -47,7 +47,7 @@ function App() {
             exact
           ></Route>
         </main>
-        <footer className="row center">All right reserved</footer>
+        {/* <footer className="row center">All right reserved</footer> */}
       </div>
     </BrowserRouter>
   );

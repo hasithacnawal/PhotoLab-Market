@@ -61,7 +61,7 @@ export const HomeTopContent = styled.div`
 `;
 
 export const TopContentH1 = styled.div`
-    color: #0494d6;
+    color: white;//
     font-size: 48px;
     text-align: center;
 
@@ -77,7 +77,7 @@ export const TopContentH1 = styled.div`
 
 export const TopContentP = styled.div`
     margin-top: 24px;
-    color: white;
+    color: #0494d6;
     font-size: 24px;
     text-align: center;
     max-width: 600px;
