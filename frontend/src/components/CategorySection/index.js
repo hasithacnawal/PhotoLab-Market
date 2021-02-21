@@ -4,7 +4,12 @@ import Icon1 from '../../images/flowers.jpg';
 import Icon2 from '../../images/love.jpg';
 import Icon3 from '../../images/wallpaper.jpg';
 
-//CSS Style should be added
+import { 
+    CategoryContainer,
+    CategoryH1, 
+    CategoryH2, 
+    CategoryWrapper, 
+    CategoryCard, CategoryIcon } from './CategoryElements';
 
 const  Category = () => {
     return (
@@ -27,6 +32,11 @@ const  Category = () => {
                     <CategoryH2>Wallpapers</CategoryH2>
                 </CategoryCard>
 
+                <CategoryCard>
+                    <CategoryIcon src={Icon4} />
+                    <CategoryH2>Cartoon</CategoryH2>
+                </CategoryCard>    
+            
             </CategoryWrapper>
         </CategoryContainer>
     );
