@@ -10,6 +10,10 @@ const productShema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    blockImage: {
+      type: String,
+      required: true,
+    },
     category: {
       type: String,
       required: true,

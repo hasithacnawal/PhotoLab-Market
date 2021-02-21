@@ -64,16 +64,9 @@ function OrderScreen(props) {
           <ul>
             <li>
               <div className="card card-body">
-                <h2>Shipping</h2>
+                <h2>Download Email</h2>
                 <p>
-                  <strong>Name : {order.shippingDetails.fullName}</strong>{" "}
-                  <br />
-                  <strong>
-                    Address : {order.shippingDetails.address} ,
-                    {order.shippingDetails.city},
-                    {order.shippingDetails.postalCode},
-                    {order.shippingDetails.country}
-                  </strong>
+                  <strong>Name : {order.shippingDetails.aEmail}</strong>{" "}
                 </p>
                 {order.isDelivered ? (
                   <MessageBox variant="success">

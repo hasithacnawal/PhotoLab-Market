@@ -99,7 +99,8 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
 
 export const signout = () => (dispatch) => {
   localStorage.removeItem("userInfo");
+  localStorage.removeItem("token");
   localStorage.removeItem("cartItems");
-  localStorage.removeItem("shippingDetails");
+  localStorage.removeItem("shipping");
   dispatch({ type: USER_SIGNOUT });
 };

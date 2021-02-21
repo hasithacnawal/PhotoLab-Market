@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { saveShippingDetails } from "../actions/cartActions";
 import CheckoutSteps from "../components/CheckoutSteps";
 
@@ -12,10 +13,13 @@ export default function ShippingDetailsScreen(props) {
   if (!userInfo) {
     props.history.push("/signin");
   }
-
-  const [fullName, setFullName] = useState(shippingDetails.fullName);
-  const [address, setAddress] = useState(shippingDetails.address);
-  const [city, setCity] = useState(shippingDetails.city);
+  const [aEmail, setAEmail] = useState(userInfo.email);
+  //const [cardType, setCardType] = useState(shippingDetails.cardType);
+  const [cardNumber, setCardNumber] = useState(shippingDetails.cardNumber);
+  const [nameOnCard, setNameOnCard] = useState(shippingDetails.nameOnCard);
+  const [mm, setMm] = useState(shippingDetails.mm);
+  const [yyyy, setYyyy] = useState(shippingDetails.yyyy);
+  const [cvv, setCvv] = useState(shippingDetails.cvv);
   const [postalCode, setPostalCode] = useState(shippingDetails.postalCode);
   const [country, setCountry] = useState(shippingDetails.country);
 
@@ -24,11 +28,29 @@ export default function ShippingDetailsScreen(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     //dispatch save shipping address
-    dispatch(
-      saveShippingDetails({ fullName, address, city, postalCode, country })
-    );
+    if (!cart.shippingDetails.cardNumber == null) {
+      dispatch(
+        saveShippingDetails({
+          aEmail,
+          cardNumber,
+          nameOnCard,
+          mm,
+          yyyy,
+          cvv,
+          postalCode,
+          country,
+        })
+      );
 
-    props.history.push("/payment");
+      props.history.push("/placeorder");
+    } else {
+      dispatch(
+        saveShippingDetails({
+          aEmail,
+        })
+      );
+      props.history.push("/payment");
+    }
   };
 
   return (
@@ -37,38 +59,78 @@ export default function ShippingDetailsScreen(props) {
 
       <form className="form" onSubmit={submitHandler}>
         <div>
-          <h1>Shipping Details</h1>
+          <h1>Card Details</h1>
         </div>
         <div>
-          <label htmlFor="fullName"> Full Name</label>
+          <label htmlFor="aEmail">
+            {" "}
+            Alternative Email (Download Link Will Send To This Email)
+          </label>
           <input
             type="text"
-            id="fullName"
-            placeholder="Enter Full name"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
+            id="aEmail"
+            placeholder="Enter Alter Email"
+            value={aEmail}
+            onChange={(e) => setAEmail(e.target.value)}
             required
+          ></input>
+          {/* <label htmlFor="cardNumber"> Card Type</label>
+          <select
+            type="text"
+            id="cardType"
+            value={cardType}
+            onChange={(e) => setCardType(e.target.value)}
+            required
+          >
+            <option>Visa</option>
+            <option>American Express</option>
+            <option>Master Card</option>
+          </select> */}
+          <label htmlFor="cardNumber"> Card Number</label>
+          <input
+            type="text"
+            id="cardNumber"
+            placeholder="Enter Card Number"
+            value={cardNumber}
+            onChange={(e) => setCardNumber(e.target.value)}
           ></input>
 
-          <label htmlFor="address"> Adderess</label>
-          <input
-            type="text"
-            id="adress"
-            placeholder="Enter adress"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-            required
-          ></input>
+          <div className="row-form">
+            <label htmlFor="address"> Name On Card</label>
+            <input
+              type="text"
+              id="adress"
+              placeholder="Enter Name on Card"
+              value={nameOnCard}
+              onChange={(e) => setNameOnCard(e.target.value)}
+            ></input>
+            <label htmlFor="cvv"> Cvv </label>
+            <input
+              type="text"
+              id="cvv"
+              placeholder="Enter cvv"
+              value={cvv}
+              onChange={(e) => setCvv(e.target.value)}
+            ></input>
+          </div>
+          <div className="row-form">
+            <label htmlFor="mm"> Expiroty </label>
+            <input
+              type="text"
+              id="mm"
+              placeholder="Month"
+              value={mm}
+              onChange={(e) => setMm(e.target.value)}
+            ></input>
 
-          <label htmlFor="city"> City </label>
-          <input
-            type="text"
-            id="city"
-            placeholder="Enter city"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-            required
-          ></input>
+            <input
+              type="text"
+              id="yyyy"
+              placeholder="Year"
+              value={yyyy}
+              onChange={(e) => setYyyy(e.target.value)}
+            ></input>
+          </div>
 
           <label htmlFor="postalCode"> Postal Code</label>
 
@@ -78,7 +140,6 @@ export default function ShippingDetailsScreen(props) {
             placeholder="Enter postal Code"
             value={postalCode}
             onChange={(e) => setPostalCode(e.target.value)}
-            required
           ></input>
 
           <label htmlFor="country"> Country </label>
@@ -88,13 +149,24 @@ export default function ShippingDetailsScreen(props) {
             placeholder="Enter country"
             value={country}
             onChange={(e) => setCountry(e.target.value)}
-            required
           ></input>
         </div>
-        <div>
+
+        <div className="row-center">
           <lable />
-          <button className="primary" type="submit">
+          <button
+            className="primary block"
+            type="submit"
+            disabled={cardNumber == null}
+          >
             Continue
+          </button>
+
+          <lable />
+          <button className="primary sign">
+            <Link to="/payment" style={{ color: "white" }}>
+              Skip
+            </Link>
           </button>
         </div>
       </form>
