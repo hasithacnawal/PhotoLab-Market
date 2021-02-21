@@ -34,4 +34,32 @@ export const CategoryWrapper = styled.div`
         padding: 0 20px;
     }
 `;
+export const CategoryCard = styled.div`
+    background: #f0c5fc;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    max-height: 340px;
+    padding: 30px;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+`;
+
+export const CategoryIcon = styled.img`
+    height: 200px;//160
+    width: 350px;
+    margin-bottom: 10px;
+`;
 
