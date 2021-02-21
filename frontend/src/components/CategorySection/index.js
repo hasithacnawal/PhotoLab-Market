@@ -4,6 +4,7 @@ import Icon1 from '../../images/flowers.jpg';
 import Icon2 from '../../images/love.jpg';
 import Icon3 from '../../images/wallpaper.jpg';
 
+//CSS Style should be added
 
 const  Category = () => {
     return (
