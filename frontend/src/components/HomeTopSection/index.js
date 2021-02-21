@@ -17,8 +17,8 @@ const HomeTopSection = () => {
                 <VideoBg autoPlay loop muted src = {video} type = 'video/mp4'/>
             </HomeTopBg>
             <HomeTopContent>
-                <TopContentH1>Want to meet your  <span style={{color: '#a6306f'}}>dream palace ?</span> </TopContentH1>
-                <TopContentP>Let us work it out together...</TopContentP>
+                <TopContentH1>PhotoLab Market</TopContentH1>
+                <TopContentP>Tranding:  Love, Happy, Family, Wallpapers</TopContentP>
             </HomeTopContent>
         </HomeTopContainer>
     );
