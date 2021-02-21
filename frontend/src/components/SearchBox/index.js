@@ -1,41 +1,25 @@
 import React from 'react';
+import icon from '../../videos/searching.svg';
 
-import Icon1 from '../../images/flowers.jpg';
-import Icon2 from '../../images/love.jpg';
-import Icon3 from '../../images/wallpaper.jpg';
+import { SearchBoxContainer, Tb, Td, ButtonContainer, SearchButton, Circle, Span, Input } from './SearchBoxSectionElements';
 
-import { 
-    CategoryContainer,
-    CategoryH1, 
-    CategoryH2, 
-    CategoryWrapper, 
-    CategoryCard, CategoryIcon } from './CategoryElements';
-
-
-const  Category = () => {
+const SearchBox = () => {
     return (
-        <CategoryContainer id="Category" >
-            <CategoryH1>Categories</CategoryH1>
-            <CategoryWrapper>
-                
-                <CategoryCard>
-                    <CategoryIcon src={Icon1} />
-                    <CategoryH2>Flowers</CategoryH2>
-                </CategoryCard>
-
-                <CategoryCard>
-                    <CategoryIcon src={Icon2} />
-                    <CategoryH2>Love</CategoryH2>
-                </CategoryCard>
-
-                <CategoryCard>
-                    <CategoryIcon src={Icon3} />
-                    <CategoryH2>Wallpapers</CategoryH2>
-                </CategoryCard>
-
-            </CategoryWrapper>
-        </CategoryContainer>
+        <SearchBoxContainer>
+            <Tb>
+                <Td>
+                    <Input type="text" placeholder="Search for images" required></Input>
+                </Td>
+                <ButtonContainer>
+                    <SearchButton type="submit">
+                       {/* <Circle></Circle>  */}
+                       {/* <Span></Span> */}
+                       <img src={icon} style={{color: "white"}}/>
+                    </SearchButton>
+                </ButtonContainer>
+            </Tb>
+        </SearchBoxContainer>
     );
 };
 
-export default  Category;
+export default SearchBox;
