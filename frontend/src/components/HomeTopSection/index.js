@@ -19,6 +19,7 @@ const HomeTopSection = () => {
             <HomeTopContent>
                 <TopContentH1>PhotoLab Market</TopContentH1>
                 <TopContentP>Tranding:  Love, Happy, Family, Wallpapers</TopContentP>
+                <SearchBox/>
             </HomeTopContent>
         </HomeTopContainer>
     );
