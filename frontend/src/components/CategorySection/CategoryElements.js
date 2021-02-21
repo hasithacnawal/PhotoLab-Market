@@ -63,3 +63,18 @@ export const CategoryIcon = styled.img`
     margin-bottom: 10px;
 `;
 
+export const CategoryH1 = styled.h1`
+    font-size: 4.5rem;
+    color: black;
+    margin-bottom: 64px;
+    align-items: center;
+    
+    @media screen and (max-width: 480px) {
+        font-size: 2rem;
+    }
+`;
+
+export const CategoryH2 = styled.h2`
+    font-size: 2rem;
+    // margin-bottom: 10px;
+`;
